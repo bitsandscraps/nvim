@@ -9,11 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'junegunn/vim-plug'
 
-Plug 'lervag/vimtex', { 'for': 'tex' }
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-Plug 'dense-analysis/ale'
 
 Plug 'SirVer/ultisnips'
 
@@ -75,12 +71,6 @@ nnoremap td :tabclose<CR>
 
 "relative line number"
 set number relativenumber
-augroup numertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave *     set relativenumber
-    autocmd BufEnter,FocusGained,InsertLeave *.tex set norelativenumber
-    autocmd BufLeave,FocusLost,InsertEnter   *     set norelativenumber
-augroup END
 
 set spell
 set spelllang=en_us
@@ -92,17 +82,6 @@ let g:palenight_terminal_italics=1
 set termguicolors
 
 let g:python3_host_prog = expand('~/.virtualenvs/neovim/bin/python')
-
-let g:tex_flavor='latex'
-let g:vimtex_quickfix_mode=0
-let g:vimtex_compiler_progname = 'nvr'
-let g:tex_conceal='abdmg'
-
-let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:vimtex_view_general_options_latexmk = '--unique'
-
-let g:indentLine_fileTypeExclude = ['tex']
 
 "key bindings for Ultisnips
 let g:UltiSnipsExpandTrigger="<c-j>"
