@@ -9,8 +9,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'junegunn/vim-plug'
 
-Plug 'lervag/vimtex', { 'for': 'tex' }
-
 Plug 'Valloric/YouCompleteMe'
 
 Plug 'SirVer/ultisnips'
@@ -58,12 +56,6 @@ nnoremap td :tabclose<CR>
 
 "relative line number"
 set number relativenumber
-augroup numertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave *     set relativenumber
-    autocmd BufEnter,FocusGained,InsertLeave *.tex set norelativenumber
-    autocmd BufLeave,FocusLost,InsertEnter   *     set norelativenumber
-augroup END
 
 set spell
 set spelllang=en_us
@@ -73,16 +65,9 @@ let g:airline_theme = "palenight"
 let g:palenight_terminal_italics=1
 set termguicolors
 
-let g:tex_flavor='latex'
 let g:ycm_server_python_interpreter = 'python3'
-let g:vimtex_quickfix_mode=0
-let g:vimtex_compiler_progname = 'nvr'
 let g:indentLine_conceallevel=0
 
-let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:vimtex_view_general_options_latexmk = '--unique'
-"
 "make YCM compatible with Ultisnips using supertab
 let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
