@@ -41,8 +41,6 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'ludovicchabant/vim-gutentags'
 
-Plug 'rlue/vim-barbaric'
-
 Plug 'whatyouhide/vim-tmux-syntax'
 
 Plug 'mbbill/undotree', {'on': 'UndotreeToggle'}
