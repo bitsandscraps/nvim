@@ -92,7 +92,6 @@ set laststatus=2
 "coc settings
 "
 let g:coc_global_extensions = [
-    \ 'coc-vimtex',
     \ 'coc-omni',
     \ 'coc-snippets',
     \ 'coc-python',
