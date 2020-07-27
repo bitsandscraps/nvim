@@ -91,9 +91,7 @@ let g:airline_theme = "palenight"
 let g:palenight_terminal_italics=1
 set termguicolors
 
-let g:python_host_prog = expand('~/.virtualenvs/neovim2/bin/python')
 let g:python3_host_prog = expand('~/.virtualenvs/neovim/bin/python')
-let g:node_host_prog = expand('~/.nvm/versions/node/v13.5.0/bin/neovim-node-host')
 
 let g:tex_flavor='latex'
 let g:vimtex_quickfix_mode=0

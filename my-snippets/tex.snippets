@@ -281,7 +281,7 @@ endsnippet
 
 priority 100
 context "math()"
-snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|exp|star|perp)' "ln" rwA
+snippet '(?<!\\)(sin|cos|tan|cot|csc|ln|log|exp|star|perp|max|min)' "ln" rwA
 \\`!p snip.rv = match.group(1)`
 endsnippet
 
@@ -293,7 +293,7 @@ endsnippet
 
 priority 200
 context "math()"
-snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "ln" rwA
+snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int|argmax|argmin)' "ln" rwA
 \\`!p snip.rv = match.group(1)`
 endsnippet
 
@@ -326,7 +326,7 @@ snippet compl "complement" iA
 endsnippet
 
 context "math()"
-snippet \\\ "setminus" iA
+snippet \\\\\ "setminus" iA
 \setminus
 endsnippet
 
@@ -432,21 +432,16 @@ snippet := "define" iA
 endsnippet
 
 context "math()"
-snippet max "max" wA
-\max
+snippet vvv "vee" iA
+\vee $0
 endsnippet
 
 context "math()"
-snippet min "min" wA
-\min
+snippet www "wedge" iA
+\wedge $0
 endsnippet
 
 context "math()"
-snippet argmax "argmax" wA
-\argmax
-endsnippet
-
-context "math()"
-snippet argmin "argmin" wA
-\argmin
+snippet !! "net" iA
+\neg $0
 endsnippet
